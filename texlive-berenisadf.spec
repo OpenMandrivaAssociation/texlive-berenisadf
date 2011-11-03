@@ -1,5 +1,9 @@
-%define _requires_exceptions	/usr/local/bin/fontforge
-
+# revision 19952
+# category Package
+# catalog-ctan /fonts/berenisadf
+# catalog-date 2010-09-22 13:22:51 +0200
+# catalog-license other-free
+# catalog-version 1.004
 Name:		texlive-berenisadf
 Version:	1.004
 Release:	1
@@ -178,6 +182,7 @@ files to use the fonts in TeXnANSI (LY1) encoding.
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ff-ybd.pe
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ybd-8y.nam
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ybd.lig
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -188,3 +193,5 @@ files to use the fonts in TeXnANSI (LY1) encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
