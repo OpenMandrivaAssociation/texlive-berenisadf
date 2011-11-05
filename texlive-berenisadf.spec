@@ -189,6 +189,9 @@ files to use the fonts in TeXnANSI (LY1) encoding.
 %prep
 %setup -c -a0 -a1 -a2
 
+perl -pi -e 's|/usr/local/bin/fontforge|/usr/bin/fontforge|'		\
+    source/fonts/berenisadf/ff-ybd.pe
+
 %build
 
 %install
