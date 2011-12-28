@@ -18,29 +18,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The bundle provides the BerenisADF Pro font collection, in
 OpenType and PostScript Type 1 formats, together with support
 files to use the fonts in TeXnANSI (LY1) encoding.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -183,7 +172,6 @@ files to use the fonts in TeXnANSI (LY1) encoding.
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ff-ybd.pe
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ybd-8y.nam
 %doc %{_texmfdistdir}/source/fonts/berenisadf/ybd.lig
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -197,5 +185,3 @@ perl -pi -e 's|/usr/local/bin/fontforge|/usr/bin/fontforge|'		\
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
