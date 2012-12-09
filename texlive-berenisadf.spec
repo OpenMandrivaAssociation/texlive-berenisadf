@@ -185,3 +185,19 @@ perl -pi -e 's|/usr/local/bin/fontforge|/usr/bin/fontforge|'		\
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.004-2
++ Revision: 749567
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.004-1
++ Revision: 719179
+- texlive-berenisadf
+- texlive-berenisadf
+- texlive-berenisadf
+- texlive-berenisadf
+- texlive-berenisadf
+- texlive-berenisadf
+
