@@ -1,12 +1,12 @@
-# revision 19952
+# revision 29845
 # category Package
 # catalog-ctan /fonts/berenisadf
-# catalog-date 2010-09-22 13:22:51 +0200
+# catalog-date 2012-11-30 15:48:00 +0100
 # catalog-license other-free
 # catalog-version 1.004
 Name:		texlive-berenisadf
 Version:	1.004
-Release:	4
+Release:	5
 Summary:	Berenis ADF fonts and TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/berenisadf
@@ -186,19 +186,3 @@ perl -pi -e 's|/usr/local/bin/fontforge|/usr/bin/fontforge|'		\
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.004-2
-+ Revision: 749567
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.004-1
-+ Revision: 719179
-- texlive-berenisadf
-- texlive-berenisadf
-- texlive-berenisadf
-- texlive-berenisadf
-- texlive-berenisadf
-- texlive-berenisadf
-
