@@ -6,7 +6,7 @@
 # catalog-version 1.004
 Name:		texlive-berenisadf
 Version:	1.004
-Release:	10
+Release:	11
 Summary:	Berenis ADF fonts and TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/berenisadf
@@ -18,6 +18,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	fontforge
+
+%define __noautoreq '/usr/bin/fontforge'
 
 %description
 The bundle provides the BerenisADF Pro font collection, in
