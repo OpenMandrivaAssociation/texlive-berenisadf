@@ -1,18 +1,12 @@
-# revision 32215
-# category Package
-# catalog-ctan /fonts/berenisadf
-# catalog-date 2013-11-21 13:05:24 +0100
-# catalog-license other-free
-# catalog-version 1.004
 Name:		texlive-berenisadf
-Version:	1.004
-Release:	16
+Version:	32215
+Release:	1
 Summary:	Berenis ADF fonts and TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/berenisadf
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.r32215.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.doc.r32215.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ files to use the fonts in TeXnANSI (LY1) and LaTeX standard T1
 and TS1 encodings.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -299,12 +293,12 @@ and TS1 encodings.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 perl -pi -e 's|/usr/local/bin/fontforge|/usr/bin/fontforge|'		\
-    fonts/berenisadf/ff-ybd.pe
+fonts/berenisadf/ff-ybd.pe
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
