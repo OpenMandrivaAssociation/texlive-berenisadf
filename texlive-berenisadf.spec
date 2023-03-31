@@ -1,6 +1,6 @@
 Name:		texlive-berenisadf
 Version:	32215
-Release:	1
+Release:	2
 Summary:	Berenis ADF fonts and TeX/LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/berenisadf
