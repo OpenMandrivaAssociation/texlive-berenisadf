@@ -3,7 +3,7 @@ Version:	32215
 Release:	2
 Summary:	Berenis ADF fonts and TeX/LaTeX support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/berenisadf
+URL:		https://www.ctan.org/tex-archive/fonts/berenisadf
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/berenisadf.doc.r%{version}.tar.xz
